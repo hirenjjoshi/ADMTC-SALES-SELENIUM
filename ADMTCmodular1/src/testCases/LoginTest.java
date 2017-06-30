@@ -4,6 +4,10 @@ import libraries.ADMTcFunctions;
 import libraries.GenericFunctions;
 
 import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.ChromeDriverManager;
+import io.github.bonigarcia.wdm.InternetExplorerDriverManager;
+
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 
@@ -29,28 +33,34 @@ import org.testng.annotations.AfterClass;
 
 
 public class LoginTest {
-	ProfilesIni allProfiles = new ProfilesIni();
-	FirefoxProfile myProfile = allProfiles.getProfile("default");
-//	public WebDriver driver = new FirefoxDriver(myProfile);
-	public WebDriver driver;
-	ADMTcFunctions admtc = new ADMTcFunctions();
-	GenericFunctions general = new GenericFunctions();
-	Boolean SettingsLinkExists, deleteExists, userIconExists;
-	WebDriverWait wait;
-	String appURL = "http://54.254.181.218/session/signin";
-	String messageIncorrectCredentials = "Invalid username or password.";
+		ProfilesIni allProfiles = new ProfilesIni();
+		FirefoxProfile myProfile = allProfiles.getProfile("default");
+	//	public WebDriver driver = new FirefoxDriver(myProfile);
+		public WebDriver driver;
+		ADMTcFunctions admtc = new ADMTcFunctions();
+		GenericFunctions general = new GenericFunctions();
+		Boolean SettingsLinkExists, deleteExists, userIconExists;
+		WebDriverWait wait;
+		String appURL = "http://54.254.181.218/session/signin";
+		String messageIncorrectCredentials = "Invalid username or password.";	
 	
-	
+	  @Parameters("browser")	
 	  @BeforeClass
-	  public void beforeClass() {
+	  public void beforeClass(String browser) {		  
 		  
-		  System.setProperty("webdriver.gecko.driver","D:\\Software\\Testing Tools\\geckodriver.exe");
-		  ProfilesIni allProfiles = new ProfilesIni();
-		  FirefoxProfile myProfile = allProfiles.getProfile("default");
-		  driver = new FirefoxDriver(myProfile);
+			if(browser.equalsIgnoreCase("chrome"))
+			{
+				System.setProperty("webdriver.chrome.driver","D:\\Software\\Testing Tools\\chromedriver.exe");
+				driver = new ChromeDriver();
+			} 
+			else if(browser.equalsIgnoreCase("firefox"))
+			{
+				System.setProperty("webdriver.gecko.driver","D:\\Software\\Testing Tools\\geckodriver.exe");
+				ProfilesIni allProfiles = new ProfilesIni();
+				FirefoxProfile myProfile = allProfiles.getProfile("default");
+				driver = new FirefoxDriver(myProfile);
+			}		  
 		  
-//		  System.setProperty("webdriver.chrome.driver","D:\\Software\\Testing Tools\\chromedriver.exe");
-//		  driver = new ChromeDriver();
 			
 		  driver.manage().window().maximize();
 //		  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);

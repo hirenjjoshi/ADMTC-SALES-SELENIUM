@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" ignored="0" total="8" passed="8">
   <reporter-output>
+    <line>
+      <![CDATA[User logged in successfully by valid credentials.]]>
+    </line>
     <line>
       <![CDATA[User logged in successfully by valid credentials.]]>
     </line>
@@ -11,51 +14,114 @@
       <![CDATA[User log in failed for incorrect Password.]]>
     </line>
     <line>
+      <![CDATA[User log in failed for incorrect Email ID.]]>
+    </line>
+    <line>
+      <![CDATA[Login button disabled by default.]]>
+    </line>
+    <line>
+      <![CDATA[User log in failed for incorrect Password.]]>
+    </line>
+    <line>
       <![CDATA[Login button disabled by default.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="198355" started-at="2017-06-27T17:43:43Z" finished-at="2017-06-27T17:47:01Z">
+  <suite name="Suite" duration-ms="271634" started-at="2017-06-30T18:01:50Z" finished-at="2017-06-30T18:06:22Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="198355" started-at="2017-06-27T17:43:43Z" finished-at="2017-06-27T17:47:01Z">
+    <test name="Chrome Login Test" duration-ms="242003" started-at="2017-06-30T18:01:50Z" finished-at="2017-06-30T18:05:52Z">
       <class name="testCases.LoginTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:testCases.LoginTest@3e57cd70]" name="beforeClass" is-config="true" duration-ms="29335" started-at="2017-06-27T23:13:43Z" finished-at="2017-06-27T23:14:12Z">
+        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:testCases.LoginTest@5bb21b69]" name="beforeClass" is-config="true" duration-ms="43686" started-at="2017-06-30T23:31:50Z" finished-at="2017-06-30T23:32:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="LoginByValidCredentialsTest()[pri:1, instance:testCases.LoginTest@3e57cd70]" name="LoginByValidCredentialsTest" duration-ms="104333" started-at="2017-06-27T23:14:12Z" finished-at="2017-06-27T23:15:56Z">
+        <test-method status="PASS" signature="LoginByValidCredentialsTest()[pri:1, instance:testCases.LoginTest@5bb21b69]" name="LoginByValidCredentialsTest" duration-ms="147029" started-at="2017-06-30T23:32:34Z" finished-at="2017-06-30T23:35:01Z">
           <reporter-output>
             <line>
               <![CDATA[User logged in successfully by valid credentials.]]>
             </line>
           </reporter-output>
         </test-method> <!-- LoginByValidCredentialsTest -->
-        <test-method status="PASS" signature="LoginByIncorrectEmailTest()[pri:2, instance:testCases.LoginTest@3e57cd70]" name="LoginByIncorrectEmailTest" duration-ms="21018" started-at="2017-06-27T23:15:56Z" finished-at="2017-06-27T23:16:17Z">
+        <test-method status="PASS" signature="LoginByIncorrectEmailTest()[pri:2, instance:testCases.LoginTest@5bb21b69]" name="LoginByIncorrectEmailTest" duration-ms="20443" started-at="2017-06-30T23:35:01Z" finished-at="2017-06-30T23:35:21Z">
           <reporter-output>
             <line>
               <![CDATA[User log in failed for incorrect Email ID.]]>
             </line>
           </reporter-output>
         </test-method> <!-- LoginByIncorrectEmailTest -->
-        <test-method status="PASS" signature="LoginByIncorrectPasswordTest()[pri:3, instance:testCases.LoginTest@3e57cd70]" name="LoginByIncorrectPasswordTest" duration-ms="22271" started-at="2017-06-27T23:16:17Z" finished-at="2017-06-27T23:16:40Z">
+        <test-method status="PASS" signature="LoginByIncorrectPasswordTest()[pri:3, instance:testCases.LoginTest@5bb21b69]" name="LoginByIncorrectPasswordTest" duration-ms="17664" started-at="2017-06-30T23:35:21Z" finished-at="2017-06-30T23:35:39Z">
           <reporter-output>
             <line>
               <![CDATA[User log in failed for incorrect Password.]]>
             </line>
           </reporter-output>
         </test-method> <!-- LoginByIncorrectPasswordTest -->
-        <test-method status="PASS" signature="LoginButtonBeforeCredentialsTest()[pri:4, instance:testCases.LoginTest@3e57cd70]" name="LoginButtonBeforeCredentialsTest" duration-ms="19317" started-at="2017-06-27T23:16:40Z" finished-at="2017-06-27T23:16:59Z">
+        <test-method status="PASS" signature="LoginButtonBeforeCredentialsTest()[pri:4, instance:testCases.LoginTest@5bb21b69]" name="LoginButtonBeforeCredentialsTest" duration-ms="11879" started-at="2017-06-30T23:35:39Z" finished-at="2017-06-30T23:35:51Z">
           <reporter-output>
             <line>
               <![CDATA[Login button disabled by default.]]>
             </line>
           </reporter-output>
         </test-method> <!-- LoginButtonBeforeCredentialsTest -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:testCases.LoginTest@3e57cd70]" name="afterClass" is-config="true" duration-ms="2061" started-at="2017-06-27T23:16:59Z" finished-at="2017-06-27T23:17:01Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:testCases.LoginTest@5bb21b69]" name="afterClass" is-config="true" duration-ms="1284" started-at="2017-06-30T23:35:51Z" finished-at="2017-06-30T23:35:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- testCases.LoginTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Chrome Login Test -->
+    <test name="Firefox Login Test" duration-ms="271634" started-at="2017-06-30T18:01:50Z" finished-at="2017-06-30T18:06:22Z">
+      <class name="testCases.LoginTest">
+        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:testCases.LoginTest@7a3d45bd]" name="beforeClass" is-config="true" duration-ms="37465" started-at="2017-06-30T23:31:50Z" finished-at="2017-06-30T23:32:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="LoginByValidCredentialsTest()[pri:1, instance:testCases.LoginTest@7a3d45bd]" name="LoginByValidCredentialsTest" duration-ms="170156" started-at="2017-06-30T23:32:28Z" finished-at="2017-06-30T23:35:18Z">
+          <reporter-output>
+            <line>
+              <![CDATA[User logged in successfully by valid credentials.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- LoginByValidCredentialsTest -->
+        <test-method status="PASS" signature="LoginByIncorrectEmailTest()[pri:2, instance:testCases.LoginTest@7a3d45bd]" name="LoginByIncorrectEmailTest" duration-ms="24773" started-at="2017-06-30T23:35:18Z" finished-at="2017-06-30T23:35:43Z">
+          <reporter-output>
+            <line>
+              <![CDATA[User log in failed for incorrect Email ID.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- LoginByIncorrectEmailTest -->
+        <test-method status="PASS" signature="LoginByIncorrectPasswordTest()[pri:3, instance:testCases.LoginTest@7a3d45bd]" name="LoginByIncorrectPasswordTest" duration-ms="21288" started-at="2017-06-30T23:35:43Z" finished-at="2017-06-30T23:36:04Z">
+          <reporter-output>
+            <line>
+              <![CDATA[User log in failed for incorrect Password.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- LoginByIncorrectPasswordTest -->
+        <test-method status="PASS" signature="LoginButtonBeforeCredentialsTest()[pri:4, instance:testCases.LoginTest@7a3d45bd]" name="LoginButtonBeforeCredentialsTest" duration-ms="16533" started-at="2017-06-30T23:36:04Z" finished-at="2017-06-30T23:36:20Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Login button disabled by default.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- LoginButtonBeforeCredentialsTest -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:testCases.LoginTest@7a3d45bd]" name="afterClass" is-config="true" duration-ms="1415" started-at="2017-06-30T23:36:20Z" finished-at="2017-06-30T23:36:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- testCases.LoginTest -->
+    </test> <!-- Firefox Login Test -->
+  </suite> <!-- Suite -->
 </testng-results>
